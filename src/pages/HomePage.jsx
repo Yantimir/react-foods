@@ -10,26 +10,29 @@ export const HomePage = () => {
 
   const dispatch = useDispatch();
   const isLoading = useSelector(state => state.foods.isLoading);
+  const foods = useSelector(state => state.foods.foods);
 
-  const addCatalog = (catalog) => {
+  const handleGetFoodsCatatlog = (catalog) => {
     dispatch(getFoodsCatatlog(catalog))
   }
 
   useEffect(() => {
     api.getAllCategories()
-      .then(data => addCatalog(data.categories))
-      .catch(err => console.log(err))
+      .then(data => handleGetFoodsCatatlog(data.categories))
+      .catch(err => console.error(err))
     // eslint-disable-next-line
   }, []);
 
 
   return (
     <>
-      {isLoading ? (
-        <Preloader />
-      ) : (
-        <CategoryList />
-      )}
+      {isLoading && !foods.length
+        ? (
+          <Preloader />
+        ) : (
+          <CategoryList />
+        )
+      }
     </>
   )
 }

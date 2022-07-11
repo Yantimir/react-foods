@@ -3,6 +3,7 @@ import { Footer } from "./components/Footer/Footer";
 import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
+import { CategoryPage } from "./pages/CategoryPage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
 import { Switch, Route } from "react-router-dom";
@@ -49,6 +50,7 @@ function App() {
               <Route path="/" exact component={HomePage} />
               <Route path="/about" component={AboutPage} />
               <Route path="/contacts" component={ContactPage} />
+              <Route path="/category/:name" component={CategoryPage} />
               <Route path="*" component={NotFoundPage} />
             </Switch>
           </main>

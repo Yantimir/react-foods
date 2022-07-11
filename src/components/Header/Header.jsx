@@ -11,45 +11,46 @@ import {
   Menu,
   MenuItem,
   Button,
-  Tooltip,
-  Avatar
+  // Tooltip,
+  // Avatar
 } from "@mui/material";
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
+// import AdbIcon from '@mui/icons-material/Adb';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 
 const pages = ['about', 'contacts'];
-const settings = [
-  'Profile',
-  'Account',
-  // 'Dashboard',
-  // 'Logout'
-];
+// const settings = [
+//   'Profile',
+//   'Account',
+//   // 'Dashboard',
+//   // 'Logout'
+// ];
 
 export const Header = () => {
 
   const [anchorElNav, setAnchorElNav] = useState(null);
-  const [anchorElUser, setAnchorElUser] = useState(null);
+  // const [anchorElUser, setAnchorElUser] = useState(null);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+  // const handleOpenUserMenu = (event) => {
+  //   setAnchorElUser(event.currentTarget);
+  // };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
 
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
+  // const handleCloseUserMenu = () => {
+  //   setAnchorElUser(null);
+  // };
 
   return (
     <AppBar position="sticky" sx={{mb: "20px"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <RestaurantIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Link to="/" style={{ textDecoration: 'none', color: '#FFFFFF' }}>
             <Typography
               variant="h6"
@@ -61,6 +62,7 @@ export const Header = () => {
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
                 fontFamily: 'monospace',
+                fontSize: "2rem",
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 color: 'inherit',
@@ -112,7 +114,7 @@ export const Header = () => {
           </Box>
 
 
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          <RestaurantIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Link to="/" style={{ textDecoration: 'none', color: '#FFFFFF' }}>
             <Typography
               variant="h5"
@@ -124,6 +126,7 @@ export const Header = () => {
                 display: { xs: 'flex', md: 'none' },
                 flexGrow: 1,
                 fontFamily: 'monospace',
+                fontSize: "2rem",
                 fontWeight: 700,
                 letterSpacing: '.3rem',
                 color: 'inherit',
@@ -150,7 +153,7 @@ export const Header = () => {
 
 
 
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
@@ -178,7 +181,7 @@ export const Header = () => {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

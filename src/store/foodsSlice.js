@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialValue = {
   foods: [],
+  mealsCategory: [],
   isLoading: true,
 }
 
@@ -12,6 +13,9 @@ const foodsSlice = createSlice({
     getFoodsCatatlog(state, action) {
       state.foods = action.payload;
       state.isLoading = false;
+    },
+    getMealsCategory(state, action){
+      state.mealsCategory = action.payload;
     },
     // deleteTodo(state, action) {
     //     state.todos = state.todos.filter(todo => todo.id !== action.payload.id);
@@ -40,6 +44,7 @@ const foodsSlice = createSlice({
 
 export const {
   getFoodsCatatlog,
+  getMealsCategory,
   // deleteTodo,
   // toggleTodoCompleted,
   // editTodos,
