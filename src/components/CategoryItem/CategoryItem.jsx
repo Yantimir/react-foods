@@ -7,9 +7,10 @@ import {
   Card,
 } from '@mui/material';
 
-import { Link } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 
 export const CategoryItem = ({ strCategory, strCategoryDescription, strCategoryThumb }) => {
+
   return (
     <Card>
       <Link to={`/category/${strCategory}`} style={{ textDecoration: 'none', color: "inherit" }}>

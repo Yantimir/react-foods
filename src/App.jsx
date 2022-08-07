@@ -4,6 +4,7 @@ import { HomePage } from "./pages/HomePage";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
 import { CategoryPage } from "./pages/CategoryPage";
+import { RecipePage } from "./pages/RecipePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
 import { Switch, Route } from "react-router-dom";
@@ -37,9 +38,6 @@ const theme = createTheme({
 
 function App() {
 
-
-
-
   return (
     <>
       <ThemeProvider theme={theme}>
@@ -51,6 +49,7 @@ function App() {
               <Route path="/about" component={AboutPage} />
               <Route path="/contacts" component={ContactPage} />
               <Route path="/category/:name" component={CategoryPage} />
+              <Route path="/meal/:id" component={RecipePage} />
               <Route path="*" component={NotFoundPage} />
             </Switch>
           </main>
