@@ -7,7 +7,7 @@ import { CategoryPage } from "./pages/CategoryPage";
 import { RecipePage } from "./pages/RecipePage";
 import { NotFoundPage } from "./pages/NotFoundPage";
 
-import { Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { Container } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
@@ -41,20 +41,22 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme}>
-        <Header />
-        <Container maxWidth="xl">
-          <main className="content">
-            <Switch>
-              <Route path="/" exact component={HomePage} />
-              <Route path="/about" component={AboutPage} />
-              <Route path="/contacts" component={ContactPage} />
-              <Route path="/category/:name" component={CategoryPage} />
-              <Route path="/meal/:id" component={RecipePage} />
-              <Route path="*" component={NotFoundPage} />
-            </Switch>
-          </main>
-        </Container>
-        <Footer />
+        <Router basename="/react-foods">
+          <Header />
+          <Container maxWidth="xl">
+            <main className="content">
+              <Switch>
+                <Route path="/" exact component={HomePage} />
+                <Route path="/about" component={AboutPage} />
+                <Route path="/contacts" component={ContactPage} />
+                <Route path="/category/:name" component={CategoryPage} />
+                <Route path="/meal/:id" component={RecipePage} />
+                <Route path="*" component={NotFoundPage} />
+              </Switch>
+            </main>
+          </Container>
+          <Footer />
+        </Router>
       </ThemeProvider>
     </>
   );
