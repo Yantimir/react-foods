@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Yantimir/react-foods/static/css/main.f2a87791.css",
-    "main.js": "/Yantimir/react-foods/static/js/main.50ed4c16.js",
-    "index.html": "/Yantimir/react-foods/index.html",
-    "main.f2a87791.css.map": "/Yantimir/react-foods/static/css/main.f2a87791.css.map",
-    "main.50ed4c16.js.map": "/Yantimir/react-foods/static/js/main.50ed4c16.js.map"
+    "main.css": "/react-foods/static/css/main.f2a87791.css",
+    "main.js": "/react-foods/static/js/main.490cbd34.js",
+    "index.html": "/react-foods/index.html",
+    "main.f2a87791.css.map": "/react-foods/static/css/main.f2a87791.css.map",
+    "main.490cbd34.js.map": "/react-foods/static/js/main.490cbd34.js.map"
   },
   "entrypoints": [
     "static/css/main.f2a87791.css",
-    "static/js/main.50ed4c16.js"
+    "static/js/main.490cbd34.js"
   ]
 }
